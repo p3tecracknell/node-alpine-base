@@ -10,6 +10,6 @@ EXPOSE 3000
 ONBUILD COPY . $HOME
 ONBUILD RUN chown app:app -R $HOME
 ONBUILD USER app
-ONBUILD RUN npm install && npm prune --production && npm test
+ONBUILD RUN npm install && npm test && npm prune --production
 
 CMD [ "npm", "start" ]
