@@ -1,4 +1,4 @@
-FROM mhart/alpine-node:6.7.0
+FROM mhart/alpine-node:7.0.0
 
 ENV HOME /usr/src/app
 RUN addgroup app && adduser -S app app && mkdir -p $HOME && apk add --update git bash && rm -rf /var/cache/apk/*
